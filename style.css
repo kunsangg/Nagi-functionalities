@@ -1339,7 +1339,7 @@ a:hover, .news-slider__card:hover {
    ========================================================================== */
 .monolog-section {
     background-color: #0b0b0b;
-    background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.06%22/%3E%3C/svg%3E');
+    
     color: #fff;
     padding: 240px 5vw;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -1352,11 +1352,11 @@ a:hover, .news-slider__card:hover {
 .monolog-grid {
     position: relative;
     display: grid;
-    grid-template-columns: 0.8fr 2.5fr 1.5fr;
-    gap: 4vw;
-    gap: 4vw;
+    grid-template-columns: 320px auto 450px;
+    gap: 8vw;
+    gap: 8vw;
     width: 100%;
-    max-width: 1600px;
+    max-width: 1920px;
     margin: 0 auto;
     align-items: center;
 }
@@ -1399,7 +1399,7 @@ a:hover, .news-slider__card:hover {
     width: 100%;
     padding-left: 24px;
     box-sizing: border-box;
-    font-size: clamp(40px, 6vw, 100px);
+    font-size: clamp(50px, 7vw, 110px);
     font-weight: 600;
     line-height: 1.1;
     letter-spacing: -2.5px;
@@ -1530,9 +1530,11 @@ a:hover, .news-slider__card:hover {
 .monolog-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-right: 2vw;
+    justify-content: flex-end;
+    padding-bottom: 5vh;
+    padding-right: 0;
     color: #fff;
+    height: 100%;
 }
 
 .monolog-quote-wrap {
