@@ -1659,3 +1659,12 @@ a:hover, .news-slider__card:hover {
 .monolog-content-wrapper { flex-grow: 1; margin-left: 6vw; margin-right: 4vw; }
 
 #quote-text { transition: opacity 0.5s ease; }
+
+/* Force transparent backgrounds so the ocean theme is fully visible */
+.section, .section--white, .monolog-section, .black-bg, .meech-horizontal-scroll-container {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+.section--home-hero, .section--home-hero * {
+    /* Keep video section intact */
+}
