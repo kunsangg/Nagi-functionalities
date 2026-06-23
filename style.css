@@ -95,7 +95,7 @@ img, video, canvas, svg {
         font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         font-size: clamp(12px, 1.1vw, 22px);
         font-weight: 400;
-        color: #444;
+        color: var(--text-primary);
         text-align: center;
         max-width: clamp(180px, 24vw, 380px);
         line-height: 1.5;
@@ -305,7 +305,7 @@ img, video, canvas, svg {
     body.light-mode .link__arrow svg,
     .section--white .link__arrow svg.arrow-img,
     body.light-mode .link__arrow svg.arrow-img {
-        stroke: #000000 !important;
+        stroke: var(--text-primary) !important;
         color: var(--text-primary, #000) !important;
     }
     
@@ -314,15 +314,15 @@ img, video, canvas, svg {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
+        /* mix-blend-mode removed */
         color: var(--text-primary, #fff) !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        border-color: var(--text-primary) !important; opacity: 0.8;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
         color: var(--text-primary, #fff) !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        stroke: var(--text-primary) !important;
+        fill: var(--text-primary) !important;
     }
     
 
@@ -343,7 +343,7 @@ body, h1, h2, h3, p, div {
 /* Make section titles more understated */
 .section-title--small {
     letter-spacing: 2px !important;
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: var(--text-primary) !important; opacity: 0.6 !important;
     font-size: 12px !important;
     text-transform: uppercase !important;
 }
@@ -455,7 +455,7 @@ a:hover, .news-slider__card:hover {
     body.light-mode .link__arrow svg,
     .section--white .link__arrow svg.arrow-img,
     body.light-mode .link__arrow svg.arrow-img {
-        stroke: #000000 !important;
+        stroke: var(--text-primary) !important;
         color: var(--text-primary, #000) !important;
     }
     
@@ -464,15 +464,15 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
+        /* mix-blend-mode removed */
         color: var(--text-primary, #fff) !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        border-color: var(--text-primary) !important; opacity: 0.8;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
         color: var(--text-primary, #fff) !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        stroke: var(--text-primary) !important;
+        fill: var(--text-primary) !important;
     }
     
 
@@ -584,7 +584,7 @@ a:hover, .news-slider__card:hover {
     body.light-mode .link__arrow svg,
     .section--white .link__arrow svg.arrow-img,
     body.light-mode .link__arrow svg.arrow-img {
-        stroke: #000000 !important;
+        stroke: var(--text-primary) !important;
         color: var(--text-primary, #000) !important;
     }
     
@@ -593,15 +593,15 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
+        /* mix-blend-mode removed */
         color: var(--text-primary, #fff) !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        border-color: var(--text-primary) !important; opacity: 0.8;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
         color: var(--text-primary, #fff) !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        stroke: var(--text-primary) !important;
+        fill: var(--text-primary) !important;
     }
     
 
@@ -640,7 +640,7 @@ a:hover, .news-slider__card:hover {
         /* Premium hover effect */
         .links:hover .links__wrap {
             background-color: rgba(255, 255, 255, 0.1) !important;
-            border-color: rgba(255, 255, 255, 0.8) !important;
+            border-color: var(--text-primary) !important; opacity: 0.8;
             transform: scale(1.02) !important;
         }
         
@@ -769,7 +769,7 @@ a:hover, .news-slider__card:hover {
     body.light-mode .link__arrow svg,
     .section--white .link__arrow svg.arrow-img,
     body.light-mode .link__arrow svg.arrow-img {
-        stroke: #000000 !important;
+        stroke: var(--text-primary) !important;
         color: var(--text-primary, #000) !important;
     }
     
@@ -778,15 +778,15 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
+        /* mix-blend-mode removed */
         color: var(--text-primary, #fff) !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        border-color: var(--text-primary) !important; opacity: 0.8;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
         color: var(--text-primary, #fff) !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        stroke: var(--text-primary) !important;
+        fill: var(--text-primary) !important;
     }
     
 
@@ -1005,7 +1005,7 @@ a:hover, .news-slider__card:hover {
     body.light-mode .link__arrow svg,
     .section--white .link__arrow svg.arrow-img,
     body.light-mode .link__arrow svg.arrow-img {
-        stroke: #000000 !important;
+        stroke: var(--text-primary) !important;
         color: var(--text-primary, #000) !important;
     }
     
@@ -1014,15 +1014,15 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
+        /* mix-blend-mode removed */
         color: var(--text-primary, #fff) !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        border-color: var(--text-primary) !important; opacity: 0.8;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
         color: var(--text-primary, #fff) !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        stroke: var(--text-primary) !important;
+        fill: var(--text-primary) !important;
     }
     
 
@@ -1218,7 +1218,7 @@ a:hover, .news-slider__card:hover {
     body.light-mode .link__arrow svg,
     .section--white .link__arrow svg.arrow-img,
     body.light-mode .link__arrow svg.arrow-img {
-        stroke: #000000 !important;
+        stroke: var(--text-primary) !important;
         color: var(--text-primary, #000) !important;
     }
     
@@ -1227,15 +1227,15 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
+        /* mix-blend-mode removed */
         color: var(--text-primary, #fff) !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        border-color: var(--text-primary) !important; opacity: 0.8;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
         color: var(--text-primary, #fff) !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        stroke: var(--text-primary) !important;
+        fill: var(--text-primary) !important;
     }
     
 
