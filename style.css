@@ -1347,8 +1347,9 @@ a:hover, .news-slider__card:hover {
 }
 
 .monolog-grid {
+    position: relative;
     display: grid;
-    grid-template-columns: 1fr 2.5fr 1.5fr;
+    grid-template-columns: 1fr 2.5fr;
     gap: 4vw;
     width: 100%;
     max-width: 1600px;
@@ -1423,14 +1424,21 @@ a:hover, .news-slider__card:hover {
     color: #fff; /* Default active item when mouse leaves the area */
 }
 
-/* Right Column - Dynamic Image */
+/* Right Column - Dynamic Image Tracking */
 .monolog-right {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50px; /* Default starting position */
+    width: 30vw;
+    max-width: 450px;
     aspect-ratio: 4 / 5;
-    background-color: #111;
+    background-color: transparent;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 8px;
+    pointer-events: none; /* Don't block hover on the list */
+    transition: top 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth vertical tracking */
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
 .monolog-img {
@@ -1455,6 +1463,7 @@ a:hover, .news-slider__card:hover {
 /* Responsive Overrides */
 @media screen and (max-width: 1024px) {
     .monolog-grid {
+    position: relative;
         grid-template-columns: 1fr 1fr;
     }
     .monolog-left {
@@ -1468,6 +1477,7 @@ a:hover, .news-slider__card:hover {
         padding: 60px 5vw;
     }
     .monolog-grid {
+    position: relative;
         grid-template-columns: 1fr;
     }
     .monolog-right {

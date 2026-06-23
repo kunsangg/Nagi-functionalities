@@ -683,7 +683,7 @@
             </ul>
 
             <!-- Right Column: Dynamic Visuals -->
-            <div class="monolog-right">
+            <div class="monolog-right" id="monolog-right">
                 <img id="img-pharma" src="researchers/pharma_pills.png" alt="Pharmaceuticals" class="monolog-img active">
                 <img id="img-academia" src="researchers/academia_bust.png" alt="Academia" class="monolog-img">
                 <img id="img-tech" src="researchers/alan_turing.jpg" alt="Technology" class="monolog-img">
@@ -701,15 +701,27 @@
     </div>
 
     <script>
-        // Monolog Hover Interaction Logic
+        // Monolog Hover Interaction Logic & Vertical Tracking
         document.addEventListener('DOMContentLoaded', () => {
             const listItems = document.querySelectorAll('.monolog-item');
             const images = document.querySelectorAll('.monolog-img');
             const listContainer = document.getElementById('monolog-list');
+            const imageContainer = document.getElementById('monolog-right');
+
+            // Set initial position based on first item
+            setTimeout(() => {
+                if(listItems.length > 0) {
+                    const firstItem = listItems[0];
+                    const itemRect = firstItem.getBoundingClientRect();
+                    const listRect = listContainer.getBoundingClientRect();
+                    const relativeY = itemRect.top - listRect.top + (itemRect.height / 2);
+                    imageContainer.style.top = `${relativeY}px`;
+                }
+            }, 100);
 
             listItems.forEach(item => {
                 item.addEventListener('mouseenter', () => {
-                    // 1. Remove default active class from all items so CSS hover takes over exclusively
+                    // 1. Remove default active class from all items
                     listItems.forEach(i => i.classList.remove('active-default'));
                     
                     // 2. Hide all images
@@ -719,14 +731,27 @@
                     const targetId = item.getAttribute('data-target');
                     const targetImage = document.getElementById(targetId);
                     if (targetImage) targetImage.classList.add('active');
+
+                    // 4. Vertical tracking calculation
+                    const itemRect = item.getBoundingClientRect();
+                    const listRect = listContainer.getBoundingClientRect();
+                    // Calculate center Y of the hovered item relative to the grid
+                    const relativeY = itemRect.top - listRect.top + (itemRect.height / 2);
+                    imageContainer.style.top = `${relativeY}px`;
                 });
             });
 
-            // When mouse leaves the entire list, reset the first item to active
+            // When mouse leaves the entire list, reset the first item to active and reset tracking
             listContainer.addEventListener('mouseleave', () => {
                 listItems[0].classList.add('active-default');
                 images.forEach(img => img.classList.remove('active'));
                 document.getElementById(listItems[0].getAttribute('data-target')).classList.add('active');
+                
+                // Reset tracking to first item
+                const itemRect = listItems[0].getBoundingClientRect();
+                const listRect = listContainer.getBoundingClientRect();
+                const relativeY = itemRect.top - listRect.top + (itemRect.height / 2);
+                imageContainer.style.top = `${relativeY}px`;
             });
         });
     </script>
