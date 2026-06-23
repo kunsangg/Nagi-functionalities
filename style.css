@@ -1550,7 +1550,7 @@ a:hover, .news-slider__card:hover {
 .monolog-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; margin-top: 10px;
     width: 320px;
     flex-shrink: 0;
     padding-right: 2vw;
@@ -1632,3 +1632,5 @@ a:hover, .news-slider__card:hover {
 }
 
 .monolog-content-wrapper { flex-grow: 1; margin-left: 6vw; margin-right: 4vw; }
+
+#quote-text { transition: opacity 0.5s ease; }
