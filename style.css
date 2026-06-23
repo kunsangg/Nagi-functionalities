@@ -1434,22 +1434,27 @@ a:hover, .news-slider__card:hover {
 
 /* Right Column - Dedicated Grid Space */
 .monolog-right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    position: relative;
     width: 480px;
     flex-shrink: 0;
+    height: 100%;
+    display: block;
 }
 
 /* The element that actually slides up and down */
 .monolog-image-track {
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 100%;
     aspect-ratio: 4/4.5;
     background-color: transparent;
     overflow: hidden;
     border-radius: 4px;
     pointer-events: none;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
 .monolog-img {
@@ -1518,11 +1523,11 @@ a:hover, .news-slider__card:hover {
     padding: 0;
 }
     .monolog-right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    position: relative;
     width: 480px;
     flex-shrink: 0;
+    height: 100%;
+    display: block;
 }
     .monolog-item {
     display: block;
