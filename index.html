@@ -717,23 +717,31 @@
         </div>
     </div>
 
-            <script>
-        // Monolog Hover Interaction Logic & Vertical Tracking
+                <script>
+        // Monolog Hover Interaction Logic & Vertical Tracking (MATH FIXED)
         document.addEventListener('DOMContentLoaded', () => {
             const listItems = document.querySelectorAll('.monolog-item');
             const images = document.querySelectorAll('.monolog-img');
             const listContainer = document.getElementById('monolog-list');
             const imageContainer = document.getElementById('monolog-image-track');
+            const rightContainer = document.querySelector('.monolog-right');
 
-            // Set initial position based on first item
+            function updateTrackPosition(targetItem) {
+                if(!targetItem || !rightContainer || !imageContainer) return;
+                const itemRect = targetItem.getBoundingClientRect();
+                const rightRect = rightContainer.getBoundingClientRect();
+                
+                // Calculate exactly how far down the right container the center of the text is
+                const targetCenterY = itemRect.top + (itemRect.height / 2);
+                const relativeY = targetCenterY - rightRect.top;
+                
+                // Move the image track so its center (-50%) matches relativeY
+                imageContainer.style.transform = `translateY(calc(-50% + ${relativeY}px))`;
+            }
+
+            // Set initial position
             setTimeout(() => {
-                if(listItems.length > 0) {
-                    const firstItem = listItems[0];
-                    const itemRect = firstItem.getBoundingClientRect();
-                    const listRect = listContainer.getBoundingClientRect();
-                    const relativeY = itemRect.top - listRect.top + (itemRect.height / 2);
-                    imageContainer.style.transform = `translateY(calc(-50% + ${relativeY}px))`;
-                }
+                if(listItems.length > 0) updateTrackPosition(listItems[0]);
             }, 100);
 
             listItems.forEach(item => {
@@ -745,11 +753,7 @@
                     const targetImage = document.getElementById(targetId);
                     if (targetImage) targetImage.classList.add('active');
 
-                    // Vertical tracking calculation
-                    const itemRect = item.getBoundingClientRect();
-                    const listRect = listContainer.getBoundingClientRect();
-                    const relativeY = itemRect.top - listRect.top + (itemRect.height / 2);
-                    imageContainer.style.transform = `translateY(calc(-50% + ${relativeY}px))`;
+                    updateTrackPosition(item);
                 });
             });
 
@@ -758,11 +762,13 @@
                 images.forEach(img => img.classList.remove('active'));
                 document.getElementById(listItems[0].getAttribute('data-target')).classList.add('active');
                 
-                // Reset tracking to first item
-                const itemRect = listItems[0].getBoundingClientRect();
-                const listRect = listContainer.getBoundingClientRect();
-                const relativeY = itemRect.top - listRect.top + (itemRect.height / 2);
-                imageContainer.style.transform = `translateY(calc(-50% + ${relativeY}px))`;
+                updateTrackPosition(listItems[0]);
+            });
+            
+            // Re-calculate on window resize
+            window.addEventListener('resize', () => {
+                const activeItem = document.querySelector('.monolog-item:hover') || listItems[0];
+                updateTrackPosition(activeItem);
             });
         });
     </script>

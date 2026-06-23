@@ -1225,7 +1225,7 @@ a:hover, .news-slider__card:hover {
     .monolog-grid {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -1358,7 +1358,7 @@ a:hover, .news-slider__card:hover {
 .monolog-grid {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -1495,7 +1495,7 @@ a:hover, .news-slider__card:hover {
     .monolog-grid {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -1516,7 +1516,7 @@ a:hover, .news-slider__card:hover {
     .monolog-grid {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     max-width: 100%;
     margin: 0;
