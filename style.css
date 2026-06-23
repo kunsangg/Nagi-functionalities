@@ -314,15 +314,11 @@ img, video, canvas, svg {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
-        color: #ffffff !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        mix-blend-mode: normal !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: #ffffff !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        /* CSS explicitly controlled below */
     }
     
 
@@ -343,7 +339,7 @@ body, h1, h2, h3, p, div {
 /* Make section titles more understated */
 .section-title--small {
     letter-spacing: 2px !important;
-    color: #ffffff !important; opacity: 0.8 !important; mix-blend-mode: difference !important;
+    mix-blend-mode: normal !important; opacity: 0.6 !important;
     font-size: 12px !important;
     text-transform: uppercase !important;
 }
@@ -464,15 +460,11 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
-        color: #ffffff !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        mix-blend-mode: normal !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: #ffffff !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        /* CSS explicitly controlled below */
     }
     
 
@@ -593,15 +585,11 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
-        color: #ffffff !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        mix-blend-mode: normal !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: #ffffff !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        /* CSS explicitly controlled below */
     }
     
 
@@ -778,15 +766,11 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
-        color: #ffffff !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        mix-blend-mode: normal !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: #ffffff !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        /* CSS explicitly controlled below */
     }
     
 
@@ -1014,15 +998,11 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
-        color: #ffffff !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        mix-blend-mode: normal !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: #ffffff !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        /* CSS explicitly controlled below */
     }
     
 
@@ -1227,15 +1207,11 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        mix-blend-mode: difference !important;
-        color: #ffffff !important;
-        border-color: rgba(255, 255, 255, 0.8) !important;
+        mix-blend-mode: normal !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: #ffffff !important;
-        stroke: #ffffff !important;
-        fill: #ffffff !important;
+        /* CSS explicitly controlled below */
     }
     
 
@@ -1667,4 +1643,47 @@ a:hover, .news-slider__card:hover {
 }
 .section--home-hero, .section--home-hero * {
     /* Keep video section intact */
+}
+
+/* Explicit color overrides for buttons and titles */
+body.surface-ocean .nagi-button, 
+body.surface-ocean .links__wrap, 
+body.surface-ocean a.links .links__wrap {
+    color: #111111 !important;
+    border: 1px solid rgba(17, 17, 17, 0.4) !important;
+}
+body.surface-ocean .nagi-button-text, 
+body.surface-ocean .nagi-button-arrow, 
+body.surface-ocean .link__text, 
+body.surface-ocean .link__text p, 
+body.surface-ocean .link__arrow, 
+body.surface-ocean .link__arrow svg, 
+body.surface-ocean .link__arrow svg.arrow-img {
+    color: #111111 !important;
+    stroke: #111111 !important;
+    fill: #111111 !important;
+}
+body.surface-ocean .section-title--small {
+    color: #111111 !important;
+}
+
+body.deep-ocean .nagi-button, 
+body.deep-ocean .links__wrap, 
+body.deep-ocean a.links .links__wrap {
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+body.deep-ocean .nagi-button-text, 
+body.deep-ocean .nagi-button-arrow, 
+body.deep-ocean .link__text, 
+body.deep-ocean .link__text p, 
+body.deep-ocean .link__arrow, 
+body.deep-ocean .link__arrow svg, 
+body.deep-ocean .link__arrow svg.arrow-img {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+    fill: #ffffff !important;
+}
+body.deep-ocean .section-title--small {
+    color: #ffffff !important;
 }
