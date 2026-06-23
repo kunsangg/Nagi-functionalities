@@ -664,10 +664,6 @@
             <!-- Middle Column: Massive Typography -->
             <div class="monolog-left">
                 <div class="monolog-quote-wrap">
-                    <div class="monolog-quote-header">
-                        <span class="quote-arrow">← →</span>
-                        <span class="quote-number" id="quote-number">01/04</span>
-                    </div>
                     <p class="monolog-quote-label">(HOW WE HELP)</p>
                     <p class="monolog-quote-text" id="quote-text">
                         “Nagi empowers researchers to cut through the noise. We care about your vision as if it were our own, turning complex data into elegant, actionable solutions. Talented, relentless, and driven by discovery.”
@@ -778,9 +774,8 @@
             
             let currentQuote = 0;
             const quoteTextEl = document.getElementById('quote-text');
-            const quoteNumberEl = document.getElementById('quote-number');
             
-            if(quoteTextEl && quoteNumberEl) {
+            if(quoteTextEl) {
                 setInterval(() => {
                     // Fade out
                     quoteTextEl.style.opacity = 0;
@@ -788,11 +783,10 @@
                     setTimeout(() => {
                         currentQuote = (currentQuote + 1) % quotes.length;
                         quoteTextEl.innerText = quotes[currentQuote];
-                        quoteNumberEl.innerText = `0${currentQuote + 1}/04`;
                         // Fade in
                         quoteTextEl.style.opacity = 1;
                     }, 500); // Wait for fade out to complete
-                }, 4000); // 4 seconds total (2s is a bit too fast to read)
+                }, 4000); // 4 seconds total
             }
         });
     </script>
