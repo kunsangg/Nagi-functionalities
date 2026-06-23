@@ -1344,6 +1344,7 @@ a:hover, .news-slider__card:hover {
     min-height: 80vh;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .monolog-grid {
@@ -1495,7 +1496,8 @@ a:hover, .news-slider__card:hover {
 @media screen and (max-width: 768px) {
     .monolog-section {
         padding: 60px 5vw;
-    }
+        overflow: hidden;
+}
     .monolog-grid {
     position: relative;
         grid-template-columns: 1fr;
