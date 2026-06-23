@@ -661,14 +661,10 @@
     <div class="section monolog-section">
         <div class="monolog-grid">
             
-            <!-- Left Column: Context -->
-            <div class="monolog-left">
-                <div class="monolog-label">What we can help with</div>
-                <p class="monolog-desc">Nagi supports researchers across many domains and industries.</p>
-            </div>
-
             <!-- Middle Column: Massive Typography -->
-            <ul class="monolog-list" id="monolog-list">
+            <div class="monolog-content-wrapper">
+                <div class="monolog-label subheading">Nagi supports researchers across many domains and industries</div>
+                <ul class="monolog-list" id="monolog-list">
                 <li class="monolog-item active-default" data-target="img-pharma">Pharmaceuticals</li>
                 <li class="monolog-item" data-target="img-academia">Academia</li>
                 <li class="monolog-item" data-target="img-tech">Technology & Engineering</li>
@@ -681,6 +677,7 @@
                 <li class="monolog-item" data-target="img-materials">Advanced Materials</li>
 
             </ul>
+            </div>
 
             <!-- Right Column: Dynamic Visuals -->
             <div class="monolog-right">
@@ -716,7 +713,7 @@
                     const itemRect = firstItem.getBoundingClientRect();
                     const listRect = listContainer.getBoundingClientRect();
                     const relativeY = itemRect.top - listRect.top + (itemRect.height / 2);
-                    imageContainer.style.top = `${relativeY}px`;
+                    imageContainer.style.transform = `translateY(calc(-50% + ${relativeY}px))`;
                 }
             }, 100);
 
@@ -738,7 +735,7 @@
                     const listRect = listContainer.getBoundingClientRect();
                     // Calculate center Y of the hovered item relative to the grid
                     const relativeY = itemRect.top - listRect.top + (itemRect.height / 2);
-                    imageContainer.style.top = `${relativeY}px`;
+                    imageContainer.style.transform = `translateY(calc(-50% + ${relativeY}px))`;
                 });
             });
 
@@ -752,7 +749,7 @@
                 const itemRect = listItems[0].getBoundingClientRect();
                 const listRect = listContainer.getBoundingClientRect();
                 const relativeY = itemRect.top - listRect.top + (itemRect.height / 2);
-                imageContainer.style.top = `${relativeY}px`;
+                imageContainer.style.transform = `translateY(calc(-50% + ${relativeY}px))`;
             });
         });
     </script>

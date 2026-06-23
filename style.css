@@ -1222,9 +1222,10 @@ a:hover, .news-slider__card:hover {
 
 /* Tablet (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
-    .ml3._1, .ml3._2, .ml3._3 {
-        font-size: clamp(40px, 8vw, 100px) !important; /* Slightly larger relative to viewport for tablet */
+    .monolog-grid {
+        grid-template-columns: 1fr;
     }
+}
     
     .section, .section--white {
         padding-left: 5vw !important;
@@ -1350,7 +1351,7 @@ a:hover, .news-slider__card:hover {
 .monolog-grid {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 2.5fr 1.5fr;
+    grid-template-columns: 3fr 2fr;
     gap: 4vw;
     width: 100%;
     max-width: 1600px;
@@ -1358,36 +1359,24 @@ a:hover, .news-slider__card:hover {
     align-items: center;
 }
 
-/* Left Column */
-.monolog-left {
-    align-self: flex-start;
-    padding-top: 20px;
-}
-
-.monolog-label {
+/* Subheading Label */
+.monolog-label.subheading {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 24px;
+    font-size: clamp(16px, 1.5vw, 20px);
+    color: #ccc;
+    margin-bottom: 40px;
     font-weight: 500;
 }
 
-.monolog-label::before {
+.monolog-label.subheading::before {
     content: '';
     display: inline-block;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background-color: #888;
-    margin-right: 12px;
-}
-
-.monolog-desc {
-    font-size: clamp(14px, 1.2vw, 16px);
-    line-height: 1.6;
-    color: #aaa;
-    margin: 0;
+    margin-right: 14px;
 }
 
 /* Middle Column - Typography List */
@@ -1437,14 +1426,14 @@ a:hover, .news-slider__card:hover {
 .monolog-image-track {
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 0;
     width: 100%;
     aspect-ratio: 4 / 5;
     background-color: transparent;
     overflow: hidden;
     border-radius: 8px;
     pointer-events: none;
-    transition: top 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     transform: translateY(-50%);
     z-index: 10;
 }
@@ -1484,9 +1473,9 @@ a:hover, .news-slider__card:hover {
 /* Responsive Overrides */
 @media screen and (max-width: 1024px) {
     .monolog-grid {
-    position: relative;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
+}
     .monolog-left {
         grid-column: 1 / -1; /* Span across top */
         margin-bottom: 40px;
