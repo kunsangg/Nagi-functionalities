@@ -1311,3 +1311,153 @@ a:hover, .news-slider__card:hover {
         font-size: 24px !important;
     }
 }
+
+
+/* ==========================================================================
+   INDUSTRIES & DOMAINS SECTION
+   ========================================================================== */
+.industry-section {
+    background-color: #f3f5f4; /* Elicit style off-white background */
+    padding: 100px 5vw;
+    font-family: 'Inter', sans-serif;
+}
+
+.industry-header-wrap {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+.industry-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #d1f4cd; /* Light green */
+    color: #0b4f3b;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.industry-badge::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #0b4f3b;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin-right: 8px;
+}
+
+.industry-title {
+    font-family: 'Noto Serif', serif; /* Similar to the elicit serif font */
+    font-size: clamp(36px, 4vw, 54px);
+    color: #0a3d42;
+    margin: 0 0 16px 0;
+    line-height: 1.1;
+}
+
+.industry-subtitle {
+    font-size: clamp(16px, 1.5vw, 18px);
+    color: #3b5c5e;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.industry-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.industry-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.industry-card-top {
+    background-color: #e8ecea; /* Light gray top */
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.industry-card-text {
+    flex: 1;
+}
+
+.industry-card-title {
+    font-size: clamp(20px, 2vw, 24px);
+    color: #0a3d42;
+    margin: 0 0 8px 0;
+    font-weight: 500;
+}
+
+.industry-card-desc {
+    font-size: clamp(14px, 1.2vw, 15px);
+    color: #4a6b6d;
+    margin: 0;
+}
+
+.industry-btn {
+    background-color: #0a3d42;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+}
+
+.industry-btn:hover {
+    background-color: #05262a;
+}
+
+.industry-card-bottom {
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.industry-logo-placeholder {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0a3d42;
+    opacity: 0.8;
+}
+
+/* Responsive Overrides */
+@media screen and (max-width: 768px) {
+    .industry-card-top {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+    }
+    
+    .industry-btn {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+    
+    .industry-card-bottom {
+        padding: 24px;
+        gap: 30px;
+    }
+}
