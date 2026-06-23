@@ -1313,135 +1313,6 @@ a:hover, .news-slider__card:hover {
 }
 
 
-/* ==========================================================================
-   INDUSTRIES & DOMAINS SECTION
-   ========================================================================== */
-.industry-section {
-    background-color: #f3f5f4; /* Elicit style off-white background */
-    padding: 100px 5vw;
-    font-family: 'Inter', sans-serif;
-}
-
-.industry-header-wrap {
-    max-width: 1200px;
-    margin: 0 auto 60px auto;
-}
-
-.industry-badge {
-    display: inline-flex;
-    align-items: center;
-    background-color: #d1f4cd; /* Light green */
-    color: #0b4f3b;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-}
-
-.industry-badge::before {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #0b4f3b;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    margin-right: 8px;
-}
-
-.industry-title {
-    font-family: 'Noto Serif', serif; /* Similar to the elicit serif font */
-    font-size: clamp(36px, 4vw, 54px);
-    color: #0a3d42;
-    margin: 0 0 16px 0;
-    line-height: 1.1;
-}
-
-.industry-subtitle {
-    font-size: clamp(16px, 1.5vw, 18px);
-    color: #3b5c5e;
-    margin: 0;
-    line-height: 1.5;
-}
-
-.industry-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.industry-card {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-}
-
-.industry-card-top {
-    background-color: #e8ecea; /* Light gray top */
-    padding: 32px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.industry-card-text {
-    flex: 1;
-}
-
-.industry-card-title {
-    font-size: clamp(20px, 2vw, 24px);
-    color: #0a3d42;
-    margin: 0 0 8px 0;
-    font-weight: 500;
-}
-
-.industry-card-desc {
-    font-size: clamp(14px, 1.2vw, 15px);
-    color: #4a6b6d;
-    margin: 0;
-}
-
-.industry-btn {
-    background-color: #0a3d42;
-    color: white;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    transition: background-color 0.2s;
-    flex-shrink: 0;
-}
-
-.industry-btn:hover {
-    background-color: #05262a;
-}
-
-.industry-card-bottom {
-    background-color: #ffffff;
-    padding: 40px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-
-.industry-logo-placeholder {
-    font-size: 18px;
-    font-weight: 700;
-    color: #0a3d42;
-    opacity: 0.8;
-}
-
 /* Responsive Overrides */
 @media screen and (max-width: 768px) {
     .industry-card-top {
@@ -1459,5 +1330,154 @@ a:hover, .news-slider__card:hover {
     .industry-card-bottom {
         padding: 24px;
         gap: 30px;
+    }
+}
+
+/* ==========================================================================
+   MONOLOG INTERACTIVE SECTION
+   ========================================================================== */
+.monolog-section {
+    background-color: #0b0b0b;
+    color: #fff;
+    padding: 120px 5vw;
+    font-family: 'Inter', sans-serif;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.monolog-grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1.5fr;
+    gap: 4vw;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Left Column */
+.monolog-left {
+    align-self: flex-start;
+    padding-top: 20px;
+}
+
+.monolog-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.monolog-label::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #888;
+    margin-right: 12px;
+}
+
+.monolog-desc {
+    font-size: clamp(14px, 1.2vw, 16px);
+    line-height: 1.6;
+    color: #aaa;
+    margin: 0;
+}
+
+/* Middle Column - Typography List */
+.monolog-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.monolog-item {
+    font-size: clamp(40px, 6vw, 90px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: #333; /* Dimmed state */
+    cursor: pointer;
+    transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: left center;
+}
+
+/* Hover logic:
+   If the LIST is hovered, all items stay dim EXCEPT the one specifically being hovered.
+   If the LIST is NOT hovered, the first item is active by default. */
+.monolog-list:hover .monolog-item {
+    color: #333; /* Everything stays dim while list is hovered */
+}
+
+.monolog-list:hover .monolog-item:hover {
+    color: #fff; /* Only the specifically hovered item lights up */
+}
+
+.monolog-list:not(:hover) .monolog-item.active-default {
+    color: #fff; /* Default active item when mouse leaves the area */
+}
+
+/* Right Column - Dynamic Image */
+.monolog-right {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: #111;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.monolog-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.8s ease;
+    transform: scale(1.05); /* Slight zoom for a dramatic reveal */
+}
+
+.monolog-img.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* Responsive Overrides */
+@media screen and (max-width: 1024px) {
+    .monolog-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .monolog-left {
+        grid-column: 1 / -1; /* Span across top */
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .monolog-section {
+        padding: 60px 5vw;
+    }
+    .monolog-grid {
+        grid-template-columns: 1fr;
+    }
+    .monolog-right {
+        display: none; /* Hide image on mobile to focus on the typography */
+    }
+    .monolog-item {
+        color: #fff; /* On mobile, everything is bright since no hover exists */
+        margin-bottom: 16px;
+    }
+    .monolog-list:hover .monolog-item {
+        color: #fff; /* Disable dimming on mobile */
     }
 }

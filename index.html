@@ -657,82 +657,66 @@
 </div>
 </section><footer class="footer black-bg" data-w-id="569ee866-bd27-3eee-7487-f451baf3c521">
 
-    <!-- INDUSTRIES SECTION -->
-    <div class="section industry-section">
-        <div class="industry-header-wrap">
-            <div class="industry-badge">INDUSTRIES</div>
-            <h2 class="industry-title">We live in a scientific world</h2>
-            <p class="industry-subtitle">Nagi supports researchers across many domains and industries</p>
-        </div>
-        
-        <div class="industry-grid">
-            <!-- Card 1 -->
-            <div class="industry-card">
-                <div class="industry-card-top">
-                    <div class="industry-card-text">
-                        <h3 class="industry-card-title">Pharmaceuticals</h3>
-                        <p class="industry-card-desc">Bring novel drugs and therapeutics to patients faster</p>
-                    </div>
-                    <a href="#" class="industry-btn">Learn more <span>→</span></a>
-                </div>
-                <div class="industry-card-bottom">
-                    <div class="industry-logo-placeholder">✧ Formation Bio</div>
-                    <div class="industry-logo-placeholder">✧ Oxford PharmaGenesis</div>
-                    <div class="industry-logo-placeholder">✧ SHIONOGI</div>
-                </div>
-            </div>
+    <!-- MONOLOG INTERACTIVE SECTION -->
+    <div class="section monolog-section">
+        <div class="monolog-grid">
             
-            <!-- Card 2 -->
-            <div class="industry-card">
-                <div class="industry-card-top">
-                    <div class="industry-card-text">
-                        <h3 class="industry-card-title">Academia</h3>
-                        <p class="industry-card-desc">Push the frontier of scientific research forward</p>
-                    </div>
-                    <a href="#" class="industry-btn">Learn more <span>→</span></a>
-                </div>
-                <div class="industry-card-bottom">
-                    <div class="industry-logo-placeholder">✧ Stanford</div>
-                    <div class="industry-logo-placeholder">✧ Yale</div>
-                    <div class="industry-logo-placeholder">✧ University of Michigan</div>
-                </div>
+            <!-- Left Column: Context -->
+            <div class="monolog-left">
+                <div class="monolog-label">What we can help with</div>
+                <p class="monolog-desc">"Nagi empowers researchers to cut through the noise. We care about your vision and accelerate discovery across every critical domain, turning complex data into elegant solutions."</p>
             </div>
 
-            <!-- Card 3 -->
-            <div class="industry-card">
-                <div class="industry-card-top">
-                    <div class="industry-card-text">
-                        <h3 class="industry-card-title">Technology & Engineering</h3>
-                        <p class="industry-card-desc">Innovate on algorithmic performance and deep technical systems</p>
-                    </div>
-                    <a href="#" class="industry-btn">Learn more <span>→</span></a>
-                </div>
-                <div class="industry-card-bottom">
-                    <div class="industry-logo-placeholder">✧ Google</div>
-                    <div class="industry-logo-placeholder">✧ NASA</div>
-                    <div class="industry-logo-placeholder">✧ RICOH</div>
-                </div>
+            <!-- Middle Column: Massive Typography -->
+            <ul class="monolog-list" id="monolog-list">
+                <li class="monolog-item active-default" data-target="img-pharma">Pharmaceuticals</li>
+                <li class="monolog-item" data-target="img-academia">Academia</li>
+                <li class="monolog-item" data-target="img-tech">Technology & Engineering</li>
+                <li class="monolog-item" data-target="img-policy">Policy & Government</li>
+            </ul>
+
+            <!-- Right Column: Dynamic Visuals -->
+            <div class="monolog-right">
+                <img id="img-pharma" src="researchers/marie_curie.jpg" alt="Pharmaceuticals" class="monolog-img active">
+                <img id="img-academia" src="researchers/albert_einstein.jpg" alt="Academia" class="monolog-img">
+                <img id="img-tech" src="researchers/alan_turing.jpg" alt="Technology" class="monolog-img">
+                <img id="img-policy" src="researchers/rachel_carson.jpg" alt="Policy" class="monolog-img">
             </div>
-            
-            <!-- Card 4 -->
-            <div class="industry-card">
-                <div class="industry-card-top">
-                    <div class="industry-card-text">
-                        <h3 class="industry-card-title">Policy & Government</h3>
-                        <p class="industry-card-desc">Empower evidence-based policy and decision making</p>
-                    </div>
-                    <a href="#" class="industry-btn">Learn more <span>→</span></a>
-                </div>
-                <div class="industry-card-bottom">
-                    <div class="industry-logo-placeholder">✧ CDC</div>
-                    <div class="industry-logo-placeholder">✧ NIH</div>
-                    <div class="industry-logo-placeholder">✧ RAND</div>
-                </div>
-            </div>
-            
+
         </div>
     </div>
-    <!-- END INDUSTRIES SECTION -->
+
+    <script>
+        // Monolog Hover Interaction Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const listItems = document.querySelectorAll('.monolog-item');
+            const images = document.querySelectorAll('.monolog-img');
+            const listContainer = document.getElementById('monolog-list');
+
+            listItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    // 1. Remove default active class from all items so CSS hover takes over exclusively
+                    listItems.forEach(i => i.classList.remove('active-default'));
+                    
+                    // 2. Hide all images
+                    images.forEach(img => img.classList.remove('active'));
+                    
+                    // 3. Show target image
+                    const targetId = item.getAttribute('data-target');
+                    const targetImage = document.getElementById(targetId);
+                    if (targetImage) targetImage.classList.add('active');
+                });
+            });
+
+            // When mouse leaves the entire list, reset the first item to active
+            listContainer.addEventListener('mouseleave', () => {
+                listItems[0].classList.add('active-default');
+                images.forEach(img => img.classList.remove('active'));
+                document.getElementById(listItems[0].getAttribute('data-target')).classList.add('active');
+            });
+        });
+    </script>
+    <!-- END MONOLOG SECTION -->
 <div class="footer_container w-container">
 <div class="footer__grid">
 <div class="c--wrap" id="w-node-_4fd51e0d-1c05-c9fa-1732-5bf33bf9a39f-3bf9a39d">
