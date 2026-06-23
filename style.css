@@ -1583,10 +1583,11 @@ a:hover, .news-slider__card:hover {
 }
 
 .monolog-quote-text {
-    font-size: 18px;
-    line-height: 1.4;
-    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.3;
+    font-weight: 600;
     margin-bottom: 40px;
+    letter-spacing: -0.5px;
 }
 
 .monolog-quote-author {
