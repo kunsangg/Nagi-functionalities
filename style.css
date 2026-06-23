@@ -1351,7 +1351,7 @@ a:hover, .news-slider__card:hover {
 .monolog-grid {
     position: relative;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1.2fr 1fr; gap: 6vw;
     gap: 4vw;
     width: 100%;
     max-width: 1600px;
@@ -1363,7 +1363,7 @@ a:hover, .news-slider__card:hover {
 .monolog-label.subheading {
     display: flex;
     align-items: center;
-    font-size: clamp(16px, 1.5vw, 20px);
+    font-size: clamp(24px, 3vw, 36px);
     color: #ccc;
     margin-bottom: 40px;
     font-weight: 500;
@@ -1389,7 +1389,7 @@ a:hover, .news-slider__card:hover {
 }
 
 .monolog-item {
-    font-size: clamp(40px, 6vw, 90px);
+    font-size: clamp(32px, 5vw, 80px);
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -1428,7 +1428,7 @@ a:hover, .news-slider__card:hover {
     right: 0;
     top: 0;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    height: 60vh; min-height: 400px; width: 100%; max-width: 550px;
     background-color: transparent;
     overflow: hidden;
     border-radius: 8px;
@@ -1460,14 +1460,15 @@ a:hover, .news-slider__card:hover {
     object-fit: cover;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.8s ease;
-    transform: scale(1.05); /* Slight zoom for a dramatic reveal */
+    /* Faster opacity, slightly springy transform for a 'pop' */
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    transform: scale(0.95) translateY(20px);
 }
 
 .monolog-img.active {
     opacity: 1;
     visibility: visible;
-    transform: scale(1);
+    transform: scale(1) translateY(0);
 }
 
 /* Responsive Overrides */
