@@ -1385,7 +1385,7 @@ a:hover, .news-slider__card:hover {
 
 /* Middle Column - Typography List */
 .monolog-list {
-    padding-left: 24px;
+    padding-left: 0;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -1394,6 +1394,10 @@ a:hover, .news-slider__card:hover {
 }
 
 .monolog-item {
+    display: block;
+    width: 100%;
+    padding-left: 24px;
+    box-sizing: border-box;
     font-size: clamp(32px, 5vw, 80px);
     font-weight: 700;
     line-height: 1.1;
@@ -1408,6 +1412,10 @@ a:hover, .news-slider__card:hover {
    If the LIST is hovered, all items stay dim EXCEPT the one specifically being hovered.
    If the LIST is NOT hovered, the first item is active by default. */
 .monolog-list:hover .monolog-item {
+    display: block;
+    width: 100%;
+    padding-left: 24px;
+    box-sizing: border-box;
     color: #333; /* Everything stays dim while list is hovered */
 }
 
@@ -1501,10 +1509,87 @@ a:hover, .news-slider__card:hover {
         display: none; /* Hide image on mobile to focus on the typography */
     }
     .monolog-item {
+    display: block;
+    width: 100%;
+    padding-left: 24px;
+    box-sizing: border-box;
         color: #fff; /* On mobile, everything is bright since no hover exists */
         margin-bottom: 16px;
     }
     .monolog-list:hover .monolog-item {
+    display: block;
+    width: 100%;
+    padding-left: 24px;
+    box-sizing: border-box;
         color: #fff; /* Disable dimming on mobile */
     }
+}
+
+/* Quote Layout */
+.monolog-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2vw;
+    color: #fff;
+}
+
+.monolog-quote-wrap {
+    max-width: 320px;
+    margin-top: -60px; /* Aligns with the higher text */
+}
+
+.monolog-quote-header {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 16px 0;
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.monolog-quote-label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+}
+
+.monolog-quote-text {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.monolog-quote-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #004fb0, #46c2eb);
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ccc;
+}
+
+.author-title {
+    font-size: 14px;
+    color: #888;
 }
