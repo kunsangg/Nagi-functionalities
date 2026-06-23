@@ -314,15 +314,15 @@ img, video, canvas, svg {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        /* mix-blend-mode removed */
-        color: var(--text-primary, #fff) !important;
-        border-color: var(--text-primary) !important; opacity: 0.8;
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: var(--text-primary, #fff) !important;
-        stroke: var(--text-primary) !important;
-        fill: var(--text-primary) !important;
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
     }
     
 
@@ -343,7 +343,7 @@ body, h1, h2, h3, p, div {
 /* Make section titles more understated */
 .section-title--small {
     letter-spacing: 2px !important;
-    color: var(--text-primary) !important; opacity: 0.6 !important;
+    color: #ffffff !important; opacity: 0.8 !important; mix-blend-mode: difference !important;
     font-size: 12px !important;
     text-transform: uppercase !important;
 }
@@ -464,15 +464,15 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        /* mix-blend-mode removed */
-        color: var(--text-primary, #fff) !important;
-        border-color: var(--text-primary) !important; opacity: 0.8;
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: var(--text-primary, #fff) !important;
-        stroke: var(--text-primary) !important;
-        fill: var(--text-primary) !important;
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
     }
     
 
@@ -593,15 +593,15 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        /* mix-blend-mode removed */
-        color: var(--text-primary, #fff) !important;
-        border-color: var(--text-primary) !important; opacity: 0.8;
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: var(--text-primary, #fff) !important;
-        stroke: var(--text-primary) !important;
-        fill: var(--text-primary) !important;
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
     }
     
 
@@ -778,15 +778,15 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        /* mix-blend-mode removed */
-        color: var(--text-primary, #fff) !important;
-        border-color: var(--text-primary) !important; opacity: 0.8;
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: var(--text-primary, #fff) !important;
-        stroke: var(--text-primary) !important;
-        fill: var(--text-primary) !important;
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
     }
     
 
@@ -1014,15 +1014,15 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        /* mix-blend-mode removed */
-        color: var(--text-primary, #fff) !important;
-        border-color: var(--text-primary) !important; opacity: 0.8;
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: var(--text-primary, #fff) !important;
-        stroke: var(--text-primary) !important;
-        fill: var(--text-primary) !important;
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
     }
     
 
@@ -1227,15 +1227,15 @@ a:hover, .news-slider__card:hover {
 
     /* MAGIC BUTTON VISIBILITY FIX */
     .nagi-button, .links__wrap, a.links .links__wrap {
-        /* mix-blend-mode removed */
-        color: var(--text-primary, #fff) !important;
-        border-color: var(--text-primary) !important; opacity: 0.8;
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
         background: transparent !important;
     }
     .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
-        color: var(--text-primary, #fff) !important;
-        stroke: var(--text-primary) !important;
-        fill: var(--text-primary) !important;
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
     }
     
 
