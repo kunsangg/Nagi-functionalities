@@ -683,7 +683,8 @@
             </ul>
 
             <!-- Right Column: Dynamic Visuals -->
-            <div class="monolog-right" id="monolog-right">
+            <div class="monolog-right">
+                <div class="monolog-image-track" id="monolog-image-track">
                 <img id="img-pharma" src="researchers/pharma_pills.png" alt="Pharmaceuticals" class="monolog-img active">
                 <img id="img-academia" src="researchers/academia_bust.png" alt="Academia" class="monolog-img">
                 <img id="img-tech" src="researchers/alan_turing.jpg" alt="Technology" class="monolog-img">
@@ -694,7 +695,7 @@
                 <img id="img-defense" src="researchers/domain_defense.png" alt="Defense" class="monolog-img">
                 <img id="img-energy" src="researchers/domain_energy.png" alt="Energy" class="monolog-img">
                 <img id="img-materials" src="researchers/domain_materials.png" alt="Materials" class="monolog-img">
-
+                </div>
             </div>
 
         </div>
@@ -706,7 +707,7 @@
             const listItems = document.querySelectorAll('.monolog-item');
             const images = document.querySelectorAll('.monolog-img');
             const listContainer = document.getElementById('monolog-list');
-            const imageContainer = document.getElementById('monolog-right');
+            const imageContainer = document.getElementById('monolog-image-track');
 
             // Set initial position based on first item
             setTimeout(() => {
