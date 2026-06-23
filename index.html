@@ -155,8 +155,6 @@
     }
 
     /* Light mode adaptations for buttons */
-    body.light-mode .links__wrap, 
-
     /* Hover effect */
     a.links:hover .link__arrow {
         transform: translateX(4px) !important;
@@ -190,11 +188,7 @@
         cursor: pointer !important;
     }
 
-    /* Light mode context */
-    body.light-mode .nagi-button, .section--white .nagi-button {
-        border-color: rgba(0, 0, 0, 0.2) !important;
-        color: #000 !important;
-    }
+    
 
     .nagi-button-text {
         display: block !important;
@@ -266,6 +260,42 @@
     /* Ensure the cursor for the typing effect also flips color */
     body.light-mode .typing-wrap::after, .section--white .typing-wrap::after {
         color: #111111 !important;
+    }
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
     }
     
 </style>
@@ -374,8 +404,6 @@ a:hover, .news-slider__card:hover {
     }
 
     /* Light mode adaptations for buttons */
-    body.light-mode .links__wrap, 
-
     /* Hover effect */
     a.links:hover .link__arrow {
         transform: translateX(4px) !important;
@@ -383,6 +411,42 @@ a:hover, .news-slider__card:hover {
     
 
     
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
     
 </style>
 <style>
@@ -469,8 +533,6 @@ a:hover, .news-slider__card:hover {
     }
 
     /* Light mode adaptations for buttons */
-    body.light-mode .links__wrap, 
-
     /* Hover effect */
     a.links:hover .link__arrow {
         transform: translateX(4px) !important;
@@ -478,6 +540,42 @@ a:hover, .news-slider__card:hover {
     
 
     
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
     
 </style>
 <style>
@@ -620,8 +718,6 @@ a:hover, .news-slider__card:hover {
     }
 
     /* Light mode adaptations for buttons */
-    body.light-mode .links__wrap, 
-
     /* Hover effect */
     a.links:hover .link__arrow {
         transform: translateX(4px) !important;
@@ -629,6 +725,42 @@ a:hover, .news-slider__card:hover {
     
 
     
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
     
 </style>
 <style>
@@ -822,8 +954,6 @@ a:hover, .news-slider__card:hover {
     }
 
     /* Light mode adaptations for buttons */
-    body.light-mode .links__wrap, 
-
     /* Hover effect */
     a.links:hover .link__arrow {
         transform: translateX(4px) !important;
@@ -831,6 +961,42 @@ a:hover, .news-slider__card:hover {
     
 
     
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
     
 </style></head>
 <body class="body">
@@ -1803,8 +1969,6 @@ a:hover, .news-slider__card:hover {
     }
 
     /* Light mode adaptations for buttons */
-    body.light-mode .links__wrap, 
-
     /* Hover effect */
     a.links:hover .link__arrow {
         transform: translateX(4px) !important;
@@ -1812,6 +1976,42 @@ a:hover, .news-slider__card:hover {
     
 
     
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
     
 </style>
 <script>
