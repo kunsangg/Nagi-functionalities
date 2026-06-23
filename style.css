@@ -1,0 +1,1190 @@
+
+  /* add custom cursor */
+  .typing-wrap::after {
+    content: "|";
+    display: inline;
+    animation: blink 1s infinite;
+  }
+
+  /* custom cursor animation */
+  @keyframes  blink {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+    
+    .meech-caption {
+        font-family: Arial, sans-serif;
+        font-size: 1.2vw;
+        font-weight: 500;
+        color: #333;
+        text-align: center;
+        max-width: 25vw;
+        line-height: 1.4;
+    }
+    
+    .meech-item {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        transition: transform 0.3s ease;
+    }
+    
+    .meech-caption {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.1vw;
+        font-weight: 400;
+        color: #444;
+        text-align: center;
+        max-width: 24vw;
+        line-height: 1.5;
+    }
+    
+    .meech-caption strong {
+        display: block;
+        font-size: 1.25vw;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 6px;
+    }
+    
+        
+        
+        .link__arrow {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            opacity: 1 !important;
+            visibility: visible !important;
+            width: 20px !important;
+            height: 20px !important;
+            margin-left: 12px;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            color: inherit;
+        }
+        
+    /* FORCE FIX BUTTONS AND BADGES */
+    .links__wrap, a.links .links__wrap {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 8px 24px !important;
+        border-radius: 50px !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        min-height: 48px !important;
+        width: auto !important;
+        display: inline-flex !important;
+        gap: 16px !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    .link__text, a.links .link__text {
+        position: relative !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex: 1 !important;
+        text-align: center !important;
+    }
+    
+    .link__text p {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .link__arrow, a.links .link__arrow {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 24px !important;
+        height: 24px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        flex-shrink: 0 !important;
+        position: relative !important;
+        right: 0 !important;
+        top: 0 !important;
+    }
+
+    .link__arrow svg.arrow-img, a.links .link__arrow svg.arrow-img {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        stroke: currentColor !important;
+    }
+
+    /* Light mode adaptations for buttons */
+    /* Hover effect */
+    a.links:hover .link__arrow {
+        transform: translateX(4px) !important;
+    }
+    
+
+        
+        
+    
+    
+
+    /* --- ULTIMATE NAGI BUTTONS --- */
+    .nagi-button {
+        display: inline-flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 12px 24px !important;
+        gap: 16px !important;
+        border-radius: 50px !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        color: #fff !important;
+        text-decoration: none !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        transition: all 0.3s ease !important;
+        box-sizing: border-box !important;
+        min-height: 48px !important;
+        background: transparent !important;
+        cursor: pointer !important;
+    }
+
+    
+
+    .nagi-button-text {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 1 !important;
+        color: inherit !important;
+    }
+
+    .nagi-button-arrow {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 1 !important;
+        font-size: 20px !important;
+        color: inherit !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    .nagi-button:hover .nagi-button-arrow {
+        transform: translateX(6px) !important;
+    }
+    
+
+    /* --- TYPING EFFECT LAYOUT FIX --- */
+    .c--wrap--split-copy.en {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: baseline !important;
+        flex-wrap: nowrap !important;
+        gap: 12px !important;
+    }
+    
+    .c--wrap--split-copy.en .c--wrap,
+    .c--wrap--split-copy.en .div-block-10 {
+        display: inline-block !important;
+        width: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .c--wrap--split-copy.en .heading--long {
+        display: inline-block !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+    }
+    
+
+    /* --- LIGHT MODE TEXT FIX --- */
+
+    /* Ensure cards retain white text on dark backgrounds regardless of section */
+    .c--wrap__card p, .c--wrap__card span {
+        color: #ffffff !important;
+    }
+    .c--wrap__card .txt--card-date {
+        color: rgba(255,255,255,0.8) !important;
+    }
+    
+    body.light-mode h1, body.light-mode h2, body.light-mode h3, body.light-mode h4, body.light-mode h5, body.light-mode h6, body.light-mode p,
+    .section--white h1, .section--white h2, .section--white h3, .section--white h4, .section--white h5, .section--white h6, .section--white p,
+    body.light-mode .heading--long, body.light-mode .section-title--small, body.light-mode .paragraph, body.light-mode .paragraph--medium, body.light-mode .letter-wrap,
+    .section--white .heading--long, .section--white .section-title--small, .section--white .paragraph, .section--white .paragraph--medium, .section--white .letter-wrap,
+    body.light-mode .typing-wrap, .section--white .typing-wrap {
+        color: #111111 !important;
+    }
+    
+    /* Ensure the cursor for the typing effect also flips color */
+    body.light-mode .typing-wrap::after, .section--white .typing-wrap::after {
+        color: #111111 !important;
+    }
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
+    
+
+
+/* Formal UX overrides */
+body, h1, h2, h3, p, div {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* Reduce the giant hero text size to feel more formal and less aggressive */
+.ml3._1, .ml3._2, .ml3._3 {
+    font-size: 6vw !important;
+    line-height: 1.1 !important;
+    text-transform: none !important;
+    letter-spacing: -1px !important;
+}
+
+/* Make section titles more understated */
+.section-title--small {
+    letter-spacing: 2px !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+}
+
+/* Remove decorative noise */
+.title--line-thin {
+    display: none !important;
+}
+
+/* Tone down hover scales if any */
+a, .news-slider__card {
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+a:hover, .news-slider__card:hover {
+    transform: none !important;
+    opacity: 0.8 !important;
+}
+
+/* Ensure background overlays are solid for better contrast */
+.overlay {
+    background-color: rgba(10, 15, 25, 0.5) !important;
+}
+
+/* Standardize text line heights for better readability */
+.paragraph--medium {
+    line-height: 1.6 !important;
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+}
+
+    /* FORCE FIX BUTTONS AND BADGES */
+    .links__wrap, a.links .links__wrap {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 8px 24px !important;
+        border-radius: 50px !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        min-height: 48px !important;
+        width: auto !important;
+        display: inline-flex !important;
+        gap: 16px !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    .link__text, a.links .link__text {
+        position: relative !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex: 1 !important;
+        text-align: center !important;
+    }
+    
+    .link__text p {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .link__arrow, a.links .link__arrow {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 24px !important;
+        height: 24px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        flex-shrink: 0 !important;
+        position: relative !important;
+        right: 0 !important;
+        top: 0 !important;
+    }
+
+    .link__arrow svg.arrow-img, a.links .link__arrow svg.arrow-img {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        stroke: currentColor !important;
+    }
+
+    /* Light mode adaptations for buttons */
+    /* Hover effect */
+    a.links:hover .link__arrow {
+        transform: translateX(4px) !important;
+    }
+    
+
+    
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
+    
+
+
+        /* Add a sleek dark gradient overlay to all background videos for better text contrast */
+        .w-background-video::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        /* Ensure the actual video stays behind the overlay */
+        .w-background-video > video {
+            z-index: -1 !important;
+            position: absolute;
+        }
+
+        /* Ensure all content inside the background video container sits firmly above the overlay */
+        .w-background-video > *:not(video):not(.navbar-glass-bg) {
+            position: relative;
+            z-index: 2;
+            text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); /* subtle drop shadow for extra crispness */
+        }
+    
+    /* FORCE FIX BUTTONS AND BADGES */
+    .links__wrap, a.links .links__wrap {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 8px 24px !important;
+        border-radius: 50px !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        min-height: 48px !important;
+        width: auto !important;
+        display: inline-flex !important;
+        gap: 16px !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    .link__text, a.links .link__text {
+        position: relative !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex: 1 !important;
+        text-align: center !important;
+    }
+    
+    .link__text p {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .link__arrow, a.links .link__arrow {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 24px !important;
+        height: 24px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        flex-shrink: 0 !important;
+        position: relative !important;
+        right: 0 !important;
+        top: 0 !important;
+    }
+
+    .link__arrow svg.arrow-img, a.links .link__arrow svg.arrow-img {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        stroke: currentColor !important;
+    }
+
+    /* Light mode adaptations for buttons */
+    /* Hover effect */
+    a.links:hover .link__arrow {
+        transform: translateX(4px) !important;
+    }
+    
+
+    
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
+    
+
+
+        /* 
+         * ULTIMATE BUTTON FIX 
+         * Completely overrides the broken fixed-width Webflow interactions
+         * and replaces them with a modern, responsive flexbox pill button.
+         */
+        .links {
+            width: auto !important; 
+            min-width: 160px !important;
+            height: 48px !important;
+            display: inline-flex !important;
+            text-decoration: none !important;
+            border-radius: 50px !important;
+        }
+        
+        .links__wrap {
+            width: auto !important;
+            height: 100% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            flex-direction: row-reverse !important; /* Arrow on left, text on right */
+            padding: 0 24px !important;
+            gap: 12px !important;
+            border: 1px solid color-mix(in srgb, currentColor 40%, transparent) !important;
+            border-radius: 50px !important;
+            box-sizing: border-box !important;
+            transition: all 0.3s ease !important;
+            overflow: hidden !important; /* Prevent any escaping elements */
+            background: transparent !important;
+        }
+        
+        /* Premium hover effect */
+        .links:hover .links__wrap {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.8) !important;
+            transform: scale(1.02) !important;
+        }
+        
+        .link__text {
+            position: static !important;
+            white-space: nowrap !important;
+            font-size: 14px !important;
+            letter-spacing: 0.5px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            transform: none !important;
+        }
+        
+        .link__text p {
+            margin: 0 !important;
+            padding: 0 !important;
+            transform: none !important;
+            line-height: 1 !important;
+            display: block !important;
+        }
+        
+        
+        .link__arrow {
+            position: static !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            display: block !important;
+            width: 14px !important;
+            height: 14px !important;
+            background-color: currentColor !important;
+            mask-image: url('https://www.srmg.com/images/arrow--white.svg') !important;
+            mask-size: contain !important;
+            mask-repeat: no-repeat !important;
+            mask-position: center !important;
+            -webkit-mask-image: url('https://www.srmg.com/images/arrow--white.svg') !important;
+            -webkit-mask-size: contain !important;
+            -webkit-mask-repeat: no-repeat !important;
+            -webkit-mask-position: center !important;
+            transform: none !important;
+            border: none !important;
+        }
+        
+        .link__arrow img {
+            display: none !important; /* Hide the original img, we use the mask instead */
+        }
+    
+    
+    /* FORCE FIX BUTTONS AND BADGES */
+    .links__wrap, a.links .links__wrap {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 8px 24px !important;
+        border-radius: 50px !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        min-height: 48px !important;
+        width: auto !important;
+        display: inline-flex !important;
+        gap: 16px !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    .link__text, a.links .link__text {
+        position: relative !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex: 1 !important;
+        text-align: center !important;
+    }
+    
+    .link__text p {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .link__arrow, a.links .link__arrow {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 24px !important;
+        height: 24px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        flex-shrink: 0 !important;
+        position: relative !important;
+        right: 0 !important;
+        top: 0 !important;
+    }
+
+    .link__arrow svg.arrow-img, a.links .link__arrow svg.arrow-img {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        stroke: currentColor !important;
+    }
+
+    /* Light mode adaptations for buttons */
+    /* Hover effect */
+    a.links:hover .link__arrow {
+        transform: translateX(4px) !important;
+    }
+    
+
+    
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
+    
+
+
+        /* OVERRIDE SRMG STAGGERED GRID - PERFECT SPACING v3 */
+        
+        #nagi-section-override {
+            width: 100% !important;
+            max-width: 100% !important;
+            position: relative !important;
+            left: auto !important;
+            transform: none !important;
+            overflow: visible !important;
+            padding: 0 !important;
+            margin: 60px 0 -40px 0 !important;
+        }
+
+        #nagi-steps-grid-override {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            gap: 32px !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            margin: 0 !important;
+            padding: 40px 15px 24px 15px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+            overflow-x: auto !important; 
+            scroll-snap-type: x mandatory !important;
+            -webkit-overflow-scrolling: touch !important;
+            /* Hide scrollbar for IE, Edge and Firefox */
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
+        }
+        
+        #nagi-steps-grid-override::-webkit-scrollbar {
+            display: none !important;
+        }
+        #nagi-steps-grid-override::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.05) !important;
+            border-radius: 10px !important;
+        }
+        #nagi-steps-grid-override::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.2) !important;
+            border-radius: 10px !important;
+            border: 2px solid transparent !important;
+            background-clip: padding-box !important;
+        }
+        #nagi-steps-grid-override::-webkit-scrollbar-thumb:hover {
+            background: rgba(0,0,0,0.4) !important;
+        }
+
+        #nagi-steps-grid-override .news-card--wrap,
+        [id^="nagi-card-override-"] {
+            flex: 0 0 350px !important; 
+            width: 350px !important;
+            max-width: 350px !important;
+            height: 850px !important; 
+            margin: 0 !important; 
+            padding: 0 !important;
+            top: auto !important;
+            bottom: auto !important;
+            align-self: auto !important;
+            transform: none !important;
+            position: relative !important;
+            display: block !important;
+            border-radius: 20px !important;
+            overflow: hidden !important;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+            scroll-snap-align: start !important;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease !important;
+        }
+        
+        #nagi-steps-grid-override .news-card--wrap:nth-child(n),
+        [id^="nagi-card-override-"]:nth-child(n) {
+            transform: none !important;
+            margin: 0 !important;
+            align-self: auto !important;
+        }
+
+        #nagi-steps-grid-override .news-card--wrap:hover,
+        [id^="nagi-card-override-"]:hover {
+            transform: translateY(-12px) !important;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.15) !important;
+        }
+    
+        
+        .nagi-carousel-btn {
+            position: absolute !important;
+            top: calc(50% - 12px) !important; /* Adjusted slightly for perfect center */
+            transform: translateY(-50%) !important;
+            width: 56px !important;
+            height: 56px !important;
+            border-radius: 50% !important;
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(8px) !important;
+            -webkit-backdrop-filter: blur(8px) !important;
+            border: 1px solid rgba(255,255,255,0.4) !important;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: pointer !important;
+            z-index: 100 !important;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+            color: #111 !important;
+        }
+        
+        .nagi-carousel-btn:hover {
+            background: #fff !important;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.2) !important;
+            transform: translateY(-50%) scale(1.1) !important;
+        }
+        
+        .nagi-carousel-btn.left {
+            left: -28px !important;
+        }
+        
+        .nagi-carousel-btn.right {
+            right: -28px !important;
+        }
+        .nagi-carousel-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        /* Make sure container doesn't hide overflowing buttons if left/right are negative */
+        #nagi-section-override {
+            overflow: visible !important;
+        }
+        
+    /* FORCE FIX BUTTONS AND BADGES */
+    .links__wrap, a.links .links__wrap {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 8px 24px !important;
+        border-radius: 50px !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        min-height: 48px !important;
+        width: auto !important;
+        display: inline-flex !important;
+        gap: 16px !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    .link__text, a.links .link__text {
+        position: relative !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex: 1 !important;
+        text-align: center !important;
+    }
+    
+    .link__text p {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .link__arrow, a.links .link__arrow {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 24px !important;
+        height: 24px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        flex-shrink: 0 !important;
+        position: relative !important;
+        right: 0 !important;
+        top: 0 !important;
+    }
+
+    .link__arrow svg.arrow-img, a.links .link__arrow svg.arrow-img {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        stroke: currentColor !important;
+    }
+
+    /* Light mode adaptations for buttons */
+    /* Hover effect */
+    a.links:hover .link__arrow {
+        transform: translateX(4px) !important;
+    }
+    
+
+    
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
+    
+
+
+    .meech-horizontal-scroll-container {
+        position: relative;
+        width: 100%;
+        height: 400vh;
+        background-color: #f3f3f2;
+        z-index: 100;
+    }
+
+    .meech-sticky-container {
+        position: sticky;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    .meech-gallery-track {
+        display: flex;
+        align-items: center;
+        gap: 12vw;
+        padding-left: 10vw;
+        will-change: transform;
+        height: 100%;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .meech-item {
+        flex-shrink: 0;
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .meech-item img {
+        max-width: 35vw;
+        max-height: 65vh;
+        object-fit: contain;
+        box-shadow: 10px 15px 40px rgba(0,0,0,0.2);
+    }
+
+    
+    
+    
+    
+    
+    
+
+    .meech-bottom-menu {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .meech-menu-arc {
+        display: flex;
+        gap: 40px;
+        align-items: flex-end;
+    }
+
+    .meech-menu-link {
+        color: rgba(0,0,0,0.2);
+        text-decoration: none;
+        font-size: 20px;
+        letter-spacing: 2px;
+        transition: color 0.3s, font-size 0.3s;
+    }
+
+    .meech-menu-link.meech-active {
+        color: rgba(0,0,0,0.8);
+        font-size: 26px;
+    }
+
+    .meech-menu-link:hover {
+        color: rgba(0,0,0,0.8);
+    }
+    
+    .meech-line-container {
+        width: 100%;
+        height: 60px;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .meech-diagonal-line {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        width: 150px;
+        height: 1px;
+        background-color: #000;
+        transform-origin: left center;
+        transform: rotate(-25deg);
+    }
+    
+    .meech-diagonal-line::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -2px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #000;
+    }
+    
+    /* FORCE FIX BUTTONS AND BADGES */
+    .links__wrap, a.links .links__wrap {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 8px 24px !important;
+        border-radius: 50px !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        min-height: 48px !important;
+        width: auto !important;
+        display: inline-flex !important;
+        gap: 16px !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    .link__text, a.links .link__text {
+        position: relative !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex: 1 !important;
+        text-align: center !important;
+    }
+    
+    .link__text p {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .link__arrow, a.links .link__arrow {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 24px !important;
+        height: 24px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        flex-shrink: 0 !important;
+        position: relative !important;
+        right: 0 !important;
+        top: 0 !important;
+    }
+
+    .link__arrow svg.arrow-img, a.links .link__arrow svg.arrow-img {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        stroke: currentColor !important;
+    }
+
+    /* Light mode adaptations for buttons */
+    /* Hover effect */
+    a.links:hover .link__arrow {
+        transform: translateX(4px) !important;
+    }
+    
+
+    
+    
+
+    /* FIX FOR BUTTONS IN WHITE SECTIONS */
+    .section--white .links__wrap, 
+    body.light-mode .links__wrap {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    .section--white .link__text, 
+    .section--white .link__text p,
+    body.light-mode .link__text,
+    body.light-mode .link__text p {
+        color: #000000 !important;
+    }
+    .section--white .link__arrow svg,
+    body.light-mode .link__arrow svg,
+    .section--white .link__arrow svg.arrow-img,
+    body.light-mode .link__arrow svg.arrow-img {
+        stroke: #000000 !important;
+        color: #000000 !important;
+    }
+    
+    
+    
+
+    /* MAGIC BUTTON VISIBILITY FIX */
+    .nagi-button, .links__wrap, a.links .links__wrap {
+        mix-blend-mode: difference !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: transparent !important;
+    }
+    .nagi-button-text, .nagi-button-arrow, .link__text, .link__text p, .link__arrow, .link__arrow svg, .link__arrow svg.arrow-img {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
+    
