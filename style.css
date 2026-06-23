@@ -1,3 +1,29 @@
+/* ==========================================================================
+   GLOBAL RESET & AUTO-SIZING
+   ========================================================================== */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box !important;
+}
+
+img, video, canvas, svg {
+    max-width: 100% !important;
+    height: auto;
+}
+
+/* Safari Flexbox Fixes */
+.section, .c--wrap, .container, .links__wrap, .brands__logo-section > div {
+    min-width: 0 !important;
+}
+
 
   /* add custom cursor */
   .typing-wrap::after {
@@ -24,11 +50,11 @@
     
     .meech-caption {
         font-family: Arial, sans-serif;
-        font-size: 1.2vw;
+        font-size: clamp(14px, 1.2vw, 24px);
         font-weight: 500;
         color: #333;
         text-align: center;
-        max-width: 25vw;
+        max-width: clamp(200px, 25vw, 400px);
         line-height: 1.4;
     }
     
@@ -43,17 +69,17 @@
     
     .meech-caption {
         font-family: 'Inter', sans-serif;
-        font-size: 1.1vw;
+        font-size: clamp(12px, 1.1vw, 22px);
         font-weight: 400;
         color: #444;
         text-align: center;
-        max-width: 24vw;
+        max-width: clamp(180px, 24vw, 380px);
         line-height: 1.5;
     }
     
     .meech-caption strong {
         display: block;
-        font-size: 1.25vw;
+        font-size: clamp(16px, 1.25vw, 28px);
         font-weight: 700;
         color: #111;
         margin-bottom: 6px;
@@ -284,7 +310,7 @@ body, h1, h2, h3, p, div {
 
 /* Reduce the giant hero text size to feel more formal and less aggressive */
 .ml3._1, .ml3._2, .ml3._3 {
-    font-size: 6vw !important;
+    font-size: clamp(32px, 6vw, 90px) !important;
     line-height: 1.1 !important;
     text-transform: none !important;
     letter-spacing: -1px !important;
@@ -1197,7 +1223,7 @@ a:hover, .news-slider__card:hover {
 /* Tablet (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
     .ml3._1, .ml3._2, .ml3._3 {
-        font-size: 8vw !important; /* Slightly larger relative to viewport for tablet */
+        font-size: clamp(40px, 8vw, 100px) !important; /* Slightly larger relative to viewport for tablet */
     }
     
     .section, .section--white {
@@ -1206,7 +1232,7 @@ a:hover, .news-slider__card:hover {
     }
     
     .heading--long {
-        font-size: 4vw !important;
+        font-size: clamp(24px, 4vw, 60px) !important;
         line-height: 1.3 !important;
     }
     
@@ -1224,12 +1250,12 @@ a:hover, .news-slider__card:hover {
     
     /* Hero text - scale up the VW so it isn't tiny */
     .ml3._1, .ml3._2, .ml3._3 {
-        font-size: 12vw !important;
+        font-size: clamp(48px, 12vw, 120px) !important;
         line-height: 1.2 !important;
     }
     
     .heading--long {
-        font-size: 6vw !important;
+        font-size: clamp(32px, 6vw, 90px) !important;
     }
     
     /* Adjust massive padding */
