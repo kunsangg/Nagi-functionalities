@@ -1734,24 +1734,23 @@ body.deep-ocean .section-title--small {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .dl-title {
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-size: 4rem;
+    font-weight: 400;
     margin: 0;
     line-height: 1.1;
-    color: #111111;
-    letter-spacing: -1px;
+    color: #202124;
+    letter-spacing: -1.5px;
 }
 
 .dl-cursor {
     display: inline-block;
     width: 3px;
-    height: 3.5rem;
+    height: 4rem;
     background: linear-gradient(to bottom, #4285f4, #ea4335, #fbbc05, #34a853);
     vertical-align: middle;
     margin-left: 8px;
@@ -1764,15 +1763,13 @@ body.deep-ocean .section-title--small {
 }
 
 .dl-btn-ghost {
-    background: #f5f5f5;
-    color: #444444;
-    padding: 10px 20px;
+    background: #f1f3f4;
+    color: #3c4043;
+    padding: 10px 24px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
-    transition: all 0.2s;
-    border: 1px solid #e0e0e0;
 }
 
 .dl-btn-ghost:hover {
@@ -1783,28 +1780,28 @@ body.deep-ocean .section-title--small {
 /* Sub-nav Tabs */
 .dl-tabs {
     display: flex;
-    border-bottom: 1px solid #eaeaea;
-    margin-bottom: 40px;
-    gap: 30px;
+    margin-bottom: 60px;
+    gap: 15px;
     overflow-x: auto;
 }
 
 .dl-tab {
-    padding: 15px 0;
-    color: #666666;
+    padding: 8px 16px;
+    color: #3c4043;
     font-weight: 500;
+    font-size: 14px;
     cursor: pointer;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s;
+    border: 1px solid #dadce0;
+    border-radius: 30px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    white-space: nowrap;
+    background: #fff;
 }
 
 .dl-tab.active {
-    color: #004fb0; /* Nagi Blue */
-    border-bottom-color: #004fb0;
+    color: #1a73e8;
+    border-color: #1a73e8;
+    background: rgba(26, 115, 232, 0.04);
 }
 
 .dl-tab:hover:not(.active) {
@@ -1812,25 +1809,24 @@ body.deep-ocean .section-title--small {
 }
 
 .dl-tab-icon {
-    font-family: monospace;
-    color: #888;
-    background: #f0f0f0;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 11px;
+    font-family: inherit;
+    color: inherit;
+    background: transparent;
+    padding: 0;
+    margin-right: 8px;
 }
 
 .dl-tab.active .dl-tab-icon {
-    color: #004fb0;
-    background: rgba(0, 79, 176, 0.1);
+    color: #1a73e8;
+    background: transparent;
 }
 
 /* Download Sections */
 .dl-section-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 25px;
-    color: #111;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #202124;
 }
 
 .dl-grid {
@@ -1849,31 +1845,25 @@ body.deep-ocean .section-title--small {
 }
 
 .dl-os-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 0 0 20px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 0 24px 0;
     display: flex;
     align-items: center;
+    color: #202124;
 }
 
 /* Buttons */
 .dl-btn-primary, .dl-btn-secondary {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 14px;
-    border-radius: 30px;
-    font-weight: 500;
-    font-size: 14px;
-    text-decoration: none;
-    margin-bottom: 12px;
-    transition: all 0.2s;
+    background: #f1f3f4;
+    color: #3c4043;
+    border: none;
 }
 
 .dl-btn-primary {
-    background: #111111;
+    background: #202124;
     color: #ffffff;
-    border: 1px solid #111111;
+    border: 1px solid #202124;
 }
 
 .dl-btn-primary:hover {
@@ -1881,9 +1871,9 @@ body.deep-ocean .section-title--small {
 }
 
 .dl-btn-secondary {
-    background: #f8f8f8;
-    color: #333333;
-    border: 1px solid #e0e0e0;
+    background: #f1f3f4;
+    color: #3c4043;
+    border: none;
 }
 
 .dl-btn-secondary:hover {
@@ -1894,22 +1884,18 @@ body.deep-ocean .section-title--small {
 /* Requirements */
 .dl-requirements {
     margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #f0f0f0;
 }
 
 .dl-requirements h4 {
-    font-size: 11px;
-    color: #666;
-    margin: 0 0 5px 0;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-size: 12px;
+    color: #202124;
+    margin: 0 0 4px 0;
+    font-weight: 500;
 }
 
 .dl-requirements p {
     font-size: 12px;
-    color: #888;
+    color: #5f6368;
     margin: 0;
     line-height: 1.5;
 }
@@ -1917,8 +1903,13 @@ body.deep-ocean .section-title--small {
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .dl-title {
-        font-size: 3rem;
-    }
+    font-size: 4rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.1;
+    color: #202124;
+    letter-spacing: -1.5px;
+}
     .dl-grid {
         grid-template-columns: 1fr;
     }
