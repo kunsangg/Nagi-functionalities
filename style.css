@@ -1687,3 +1687,238 @@ body.deep-ocean .link__arrow svg.arrow-img {
 body.deep-ocean .section-title--small {
     color: #ffffff !important;
 }
+
+
+/* ==========================================================================
+   DOWNLOAD PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+.body.dl-page-body {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #111111;
+    overflow-x: hidden;
+}
+
+/* Make sure the navbar glass effect works on white */
+.dl-page-body .navbar-glass-bg {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Make navbar text dark on the download page */
+.dl-page-body .nav-txtxlinks, 
+.dl-page-body .nagi-desktop-nav a {
+    color: #111111 !important;
+}
+
+/* Explicitly style the Logo to ensure it stands out on white */
+.dl-page-body .logo--home span:last-child {
+    color: #111111 !important;
+}
+
+.dl-main {
+    padding-top: 150px; /* Space for fixed navbar */
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.dl-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4vw;
+}
+
+/* Header Section */
+.dl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dl-title {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.1;
+    color: #111111;
+    letter-spacing: -0.5px;
+}
+
+.dl-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 3rem;
+    background-color: #0088cc; /* Nagi blue */
+    vertical-align: middle;
+    margin-left: 8px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.dl-btn-ghost {
+    background: #f5f5f5;
+    color: #444444;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s;
+    border: 1px solid #e0e0e0;
+}
+
+.dl-btn-ghost:hover {
+    background: #ebebeb;
+    color: #111111;
+}
+
+/* Sub-nav Tabs */
+.dl-tabs {
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 40px;
+    gap: 30px;
+    overflow-x: auto;
+}
+
+.dl-tab {
+    padding: 15px 0;
+    color: #666666;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.dl-tab.active {
+    color: #004fb0; /* Nagi Blue */
+    border-bottom-color: #004fb0;
+}
+
+.dl-tab:hover:not(.active) {
+    color: #111111;
+}
+
+.dl-tab-icon {
+    font-family: monospace;
+    color: #888;
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+.dl-tab.active .dl-tab-icon {
+    color: #004fb0;
+    background: rgba(0, 79, 176, 0.1);
+}
+
+/* Download Sections */
+.dl-section-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+.dl-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.dl-card {
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 30px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.dl-os-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Buttons */
+.dl-btn-primary, .dl-btn-secondary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: all 0.2s;
+}
+
+.dl-btn-primary {
+    background: #111111;
+    color: #ffffff;
+    border: 1px solid #111111;
+}
+
+.dl-btn-primary:hover {
+    background: #333333;
+}
+
+.dl-btn-secondary {
+    background: #f8f8f8;
+    color: #333333;
+    border: 1px solid #e0e0e0;
+}
+
+.dl-btn-secondary:hover {
+    background: #f0f0f0;
+    border-color: #d0d0d0;
+}
+
+/* Requirements */
+.dl-requirements {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.dl-requirements h4 {
+    font-size: 11px;
+    color: #666;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dl-requirements p {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .dl-title {
+        font-size: 2.5rem;
+    }
+    .dl-grid {
+        grid-template-columns: 1fr;
+    }
+}
