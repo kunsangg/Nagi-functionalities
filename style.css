@@ -1708,7 +1708,7 @@ body.deep-ocean .section-title--small {
 
 /* Make navbar text dark on the download page */
 .dl-page-body .nav-txtxlinks, 
-.dl-page-body .nagi-desktop-nav a {
+.dl-page-body .nagi-desktop-nav a:not([href="download.html"]) {
     color: #111111 !important;
 }
 
