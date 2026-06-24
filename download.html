@@ -52,6 +52,16 @@
             color: #1a1a1a;
         }
     </style>
+
+    <style>
+        @keyframes tw-blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        #tw-cursor {
+            animation: tw-blink 1s step-end infinite;
+        }
+    </style>
 </head>
 <body class="body dl-page-body">
 <div class="navbar-glass-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 90px; background: rgba(0, 0, 0, 0.35); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); z-index: 9999; pointer-events: none;"></div>
@@ -277,7 +287,7 @@
         
         <!-- Header -->
         <div class="dl-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
-            <h1 class="dl-title" style="font-size: 52px; font-weight: 400; line-height: 1.15; letter-spacing: -1px; margin: 0;">Download Nagi<br>for Web</h1>
+            <h1 class="dl-title" style="font-size: 52px; font-weight: 400; line-height: 1.15; letter-spacing: -1px; margin: 0;">Download Nagi<br>for <span style="display: inline-block; position: relative; border-bottom: 2px solid #1a1a1a; line-height: 1.1;"><span id="tw-text">Web</span><span id="tw-cursor" style="font-weight: 300; margin-left: 2px; color: #1a1a1a;">|</span></span></h1>
             <a href="javascript:void(0);" class="dl-btn-ghost" style="padding: 10px 20px; border-radius: 40px; background-color: #f1f3f4; color: #1a1a1a; text-decoration: none; font-size: 14px; font-weight: 500; margin-top: 0; margin-left: 20px;">View changelog</a>
         </div>
 
@@ -416,5 +426,44 @@
     
 
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const words = ["Web", "macOS", "Windows"];
+            let i = 0;
+            let timer;
+            const textEl = document.getElementById('tw-text');
+            if (!textEl) return;
+
+            function typeWriter(word, index, callback) {
+                if (index < word.length) {
+                    textEl.textContent += word.charAt(index);
+                    timer = setTimeout(() => typeWriter(word, index + 1, callback), 80);
+                } else {
+                    timer = setTimeout(callback, 2000); // Hold for 2s
+                }
+            }
+
+            function eraseWriter(callback) {
+                let text = textEl.textContent;
+                if (text.length > 0) {
+                    textEl.textContent = text.substring(0, text.length - 1);
+                    timer = setTimeout(() => eraseWriter(callback), 50);
+                } else {
+                    callback();
+                }
+            }
+
+            function loop() {
+                i = (i + 1) % words.length;
+                eraseWriter(() => {
+                    typeWriter(words[i], 0, loop);
+                });
+            }
+
+            // Start the loop after the initial hold (since "Web" is already there)
+            timer = setTimeout(loop, 2000);
+        });
+    </script>
 </body>
 </html>
