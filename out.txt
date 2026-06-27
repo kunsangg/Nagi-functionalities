@@ -1,4 +1,0 @@
-<div class="nav-txtxlinks en">Workflow</div>
-<div class="paragraph--medium en" style="max-width: 800px"><p>A complete environment for comprehension. From topic discovery to field synthesis, Nagi is the only tool built for the full workflow.</p></div>
-                              The Full Workflow: From "I have a topic" to "I have written something I actually understand."
-<a class="nagi-button" href="#"><span class="nagi-button-text">learn nagi workflow</span><span class="nagi-button-arrow">→</span></a>
